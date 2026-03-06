@@ -35,11 +35,13 @@ document.getElementById("videoScreen").style.display = "block";
 
 }
 
+
 function joinDiscord(){
 
 window.open("https://discord.gg/GtXZMKSAaf","_blank");
 
 }
+
 
 /* 뒤로가기 버튼 */
 
@@ -52,6 +54,7 @@ document.getElementById("ytPlayer").src = "";
 
 }
 
+
 /* 엔터키 로그인 */
 
 document.getElementById("password").addEventListener("keydown", function(e){
@@ -61,3 +64,19 @@ login();
 }
 
 });
+
+function generateNickname(){
+
+const words = [
+"Shadow","Nova","Racer","Ghost","Storm",
+"Blaze","Phantom","Zero","Drift","Turbo"
+];
+
+const randomWord = words[Math.floor(Math.random()*words.length)];
+const randomNumber = Math.floor(Math.random()*10000);
+
+const nickname = randomWord + randomNumber;
+
+document.getElementById("name").value = nickname;
+
+}
