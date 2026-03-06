@@ -64,19 +64,3 @@ login();
 }
 
 });
-
-function generateNickname(){
-
-const words = [
-"Shadow","Nova","Racer","Ghost","Storm",
-"Blaze","Phantom","Zero","Drift","Turbo"
-];
-
-const randomWord = words[Math.floor(Math.random()*words.length)];
-const randomNumber = Math.floor(Math.random()*10000);
-
-const nickname = randomWord + randomNumber;
-
-document.getElementById("name").value = nickname;
-
-}
