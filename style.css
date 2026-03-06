@@ -163,26 +163,3 @@ font-size:28px;
 }
 
 }
-
-.name-box{
-display:flex;
-gap:10px;
-}
-
-.name-box input{
-flex:1;
-}
-
-.dice-btn{
-width:40px;
-padding:0;
-font-size:18px;
-background:#444;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-.dice-btn:hover{
-background:#666;
-}
