@@ -1,16 +1,41 @@
 body{
 margin:0;
 font-family:sans-serif;
-background:#0a0a0a;
 color:white;
+min-height:100vh;
+
+/* 배경 이미지 */
+background-image:url("https://4kwallpapers.com/images/walls/thumbs_3t/20225.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
 display:flex;
 justify-content:center;
 align-items:center;
-min-height:100vh;
 }
 
-/* 로그인 */
+#startContainer{
+background:transparent;
+box-shadow:none;
+border:none;
+}
+#startContainer h1{
+text-shadow:0 2px 10px rgba(0,0,0,0.8);
+}
+#startContainer h1{
+position:relative;
+top:-30px;
+}
 
+
+#introContainer{
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+}
+
+
+/* 컨테이너 */
 .container{
 width:320px;
 background:#1b1b1b;
@@ -19,24 +44,11 @@ border-radius:10px;
 text-align:center;
 }
 
-.input-box{
-margin:10px 0;
-text-align:left;
-}
-
-input{
-width:100%;
-padding:10px;
-border:none;
-border-radius:6px;
-background:#333;
-color:white;
-}
-
+/* 버튼 */
 button{
 width:100%;
 padding:10px;
-margin-top:10px;
+margin-top:40px;
 border:none;
 background:#e50914;
 color:white;
@@ -44,9 +56,11 @@ cursor:pointer;
 border-radius:6px;
 }
 
+button:hover{
+background:#b20710;
+}
 
 /* 선택 화면 */
-
 #choiceContainer{
 display:none;
 width:100%;
@@ -59,9 +73,7 @@ margin-bottom:40px;
 font-size:40px;
 }
 
-
 /* 카드 */
-
 .choice-grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -93,16 +105,12 @@ transform:scale(1.08);
 box-shadow:0 10px 25px rgba(0,0,0,0.7);
 }
 
-
-/* 디스코드 카드 */
-
+/* 디스코드 */
 .discord{
 background:#5865F2;
 }
 
-
-/* 영상 화면 */
-
+/* 영상 */
 #videoScreen{
 display:none;
 position:fixed;
@@ -119,9 +127,7 @@ height:100%;
 border:none;
 }
 
-
-/* 뒤로가기 버튼 */
-
+/* 뒤로가기 */
 #backBtn{
 position:fixed;
 top:10px;
@@ -141,19 +147,14 @@ z-index:9999;
 background:#b20710;
 }
 
-
 /* 모바일 */
-
 @media(max-width:900px){
-
 .choice-grid{
 grid-template-columns:repeat(2,1fr);
 }
-
 }
 
 @media(max-width:500px){
-
 .choice-grid{
 grid-template-columns:1fr;
 }
@@ -161,28 +162,4 @@ grid-template-columns:1fr;
 .title{
 font-size:28px;
 }
-
-}
-
-.name-box{
-display:flex;
-gap:10px;
-}
-
-.name-box input{
-flex:1;
-}
-
-.dice-btn{
-width:40px;
-padding:0;
-font-size:18px;
-background:#444;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-.dice-btn:hover{
-background:#666;
 }
