@@ -3,42 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>영상 선택</title>
+<title>Ge_Nio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- 사이트 입장 -->
-<div id="loginContainer" class="container">
-
-<h2>사이트 입장 확인</h2>
-
-<div class="input-box">
-<label>이름</label>
-
-<div class="name-box">
-<input type="text" id="name">
-<button type="button" class="dice-btn" onclick="generateNickname()">🎲</button>
+<!-- 시작 화면 -->
+<div id="startContainer" class="container">
+<h1>Ge_Nio</h1>
+<button onclick="showIntro()">START !</button>
 </div>
 
+<!-- 소개 화면 -->
+<div id="introContainer" class="container" style="display:none;">
+<h2>Ge_Nio INFO</h2>
+<p>
+안녕하세요.<br>
+저는 니오입니다.<br>
+저의 대해 소개합니다.
+</p>
+
+<button onclick="goToMain()">입장하기</button>
 </div>
-
-
-
-<div class="input-box">
-<label>비밀번호</label>
-<input type="password" id="password">
-</div>
-
-<button onclick="login()">확인</button>
-<div id="message"></div>
-
-</div>
-
 
 <!-- 선택 화면 -->
-<div id="choiceContainer" style="display:none;">
+<div id="choiceContainer">
 
 <h1 class="title">콘텐츠 선택</h1>
 
@@ -46,12 +36,12 @@
 
 <div class="choice-card" onclick="playVideo('xrYWlhhfD4w')">
 <img src="https://img.youtube.com/vi/xrYWlhhfD4w/maxresdefault.jpg">
-<p>VAGA GP 영상</p>
+<p>VAGABOND 홍보영상 (VAGA GP)</p>
 </div>
 
 <a href="https://youtube.com/playlist?list=PLlIOyqDV7MobDksGbeEEi5mfK-vBWuIk0" target="_blank" class="choice-card">
 <img src="https://i.ytimg.com/vi/tXR4-ahomuY/maxresdefault.jpg">
-<p>추천 노래</p>
+<p>니오의 플레이리스트</p>
 </a>
 
 <a href="https://www.racingmaster.game/kr/" target="_blank" class="choice-card">
@@ -69,33 +59,29 @@
 <p>Riot ID : Nieo #Корея</p>
 </div>
 
-  
 <a href="https://instagram.com/dhl_vagabond.ngv" target="_blank" class="choice-card">
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-<p>인스타</p>
+<p>니오의 인스타</p>
 </a>
 
 <a href="https://youtube.com/@VAGABOND_VM_Nieo" target="_blank" class="choice-card">
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
-<p>유튜브 채널</p>
+<p>니오의 유튜브 채널</p>
 </a>
-
 
 <div class="choice-card discord" onclick="joinDiscord()">
 <img src="https://i.imgur.com/6W1sFmZ.png">
 <p>NGV Discord 참여</p>
 </div>
 
+  
 </div>
 </div>
-
 
 <!-- 영상 화면 -->
-<div id="videoScreen" style="display:none;">
+<div id="videoScreen">
 
-<iframe id="ytPlayer"
-allow="autoplay"
-allowfullscreen></iframe>
+<iframe id="ytPlayer" allow="autoplay" allowfullscreen></iframe>
 
 <button id="backBtn" onclick="goBack()">뒤로가기</button>
 
